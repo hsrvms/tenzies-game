@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  position: relative;
+
+  height: 100vh;
+
+  @apply bg-dirtywhite;
+}
+
+@layer components {
+  .die {
+    @apply flex justify-center items-center bg-white w-9 aspect-square rounded shadow-md cursor-pointer;
+  }
+}
