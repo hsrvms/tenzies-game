@@ -16,15 +16,26 @@
   }
 
   .main-container {
-    @apply bg-dirtywhite w-full h-full p-9 rounded-xl flex flex-col items-center justify-center
+    @apply bg-dirtywhite w-full h-full p-9 rounded-xl flex flex-col items-center justify-between;
   }
 
   .die {
-    @apply flex justify-center items-center bg-white w-9 aspect-square rounded shadow-md cursor-pointer;
+    @apply grid grid-cols-2 gap-1 items-center place-items-center bg-white w-9 p-1 aspect-square rounded shadow-md cursor-pointer;
+  }
+
+  .dot {
+    @apply text-3xl bg-blue border rounded-full aspect-square w-2
   }
 
   .button {
     @apply w-[92px] h-[35px] border-none rounded bg-blue text-white focus:outline-none active:shadow-lg hover:scale-105 transition-transform;
   }
 
+  .title {
+    @apply text-2xl font-semibold text-center;
+  }
+
+  .instructions {
+    @apply text-sm text-center
+  }
 }
