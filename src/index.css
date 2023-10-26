@@ -11,7 +11,20 @@
 }
 
 @layer components {
+  .main {
+    @apply bg-nightblue max-w-[360px] max-h-[380px] h-full mx-auto px-5 py-7 rounded-2xl relative top-1/2 -translate-y-1/2 font-sans select-none;
+  }
+
+  .main-container {
+    @apply bg-dirtywhite w-full h-full p-9 rounded-xl flex flex-col items-center justify-center
+  }
+
   .die {
     @apply flex justify-center items-center bg-white w-9 aspect-square rounded shadow-md cursor-pointer;
   }
+
+  .button {
+    @apply w-[92px] h-[35px] border-none rounded bg-blue text-white focus:outline-none active:shadow-lg hover:scale-105 transition-transform;
+  }
+
 }
