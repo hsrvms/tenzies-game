@@ -1,3 +1,5 @@
+[Play Tenzies Game](https://tenzies-game-orcin.vercel.app/)
+
 # Tenzies Game
 
 Tenzies is a simple and exciting dice game implemented in React.js. The goal of the game is to roll the dice and strategically choose which ones to hold, with the aim of getting all the dice to display the same number. You win when you achieve this and can keep track of your progress with a roll counter.
@@ -18,4 +20,3 @@ Tenzies is a simple and exciting dice game implemented in React.js. The goal of 
 
 The game keeps track of the number of rolls you've made. You can see this information displayed on the screen, which helps you keep score and track your progress.
 
-[Play Tenzies Game](tenzies-game-orcin.vercel.app)
