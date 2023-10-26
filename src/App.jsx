@@ -9,7 +9,8 @@ function App() {
 
   const [dice, setDice] = useState(allNewDice());
   const [tenzies, setTenzies] = useState(false);
-  console.log(tenzies)
+  const [rolls, setRolls] = useState(0);
+
   useEffect(() => {
     const isAllHeld = dice.every(die => die.isHeld);
     const isAllSameValue = dice.every(die => die.value === dice[0].value)
@@ -33,9 +34,11 @@ function App() {
     if (tenzies) {
       setDice(allNewDice());
       setTenzies(false)
+      setRolls(0);
       return;
     }
 
+    setRolls(prevRoll => prevRoll + 1)
     setDice(prevDice => prevDice.map(die => {
       return die.isHeld ?
         die :
@@ -73,7 +76,12 @@ function App() {
         <div id="dieContainer" className="grid grid-cols-5 gap-4">
           {diceElements}
         </div>
-        <button className="button" onClick={handleRoll}>{tenzies ? 'New Game' : 'Roll'}</button>
+        <div className="flex items-center w-full">
+          <div className="mr-auto border-4 rounded-xl border-blue font-semibold aspect-square w-9 flex items-center justify-center">
+            {rolls}
+          </div>
+          <button className="button" onClick={handleRoll}>{tenzies ? 'New Game' : 'Roll'}</button>
+        </div>
       </div>
       {tenzies && <ConfettiExplosion particleCount={300} height={'250vh'} />}
     </main>
