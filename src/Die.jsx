@@ -1,8 +1,9 @@
 
-const Die = ({ value }) => {
+const Die = ({ die, holdDice}) => {
   return (
-    <div className="die">
-      {value}
+    <div className={`die ${die.isHeld ? 'bg-lightgreen' : ''}`}
+      onClick={holdDice}>
+      {die.value}
     </div>
   )
 }
